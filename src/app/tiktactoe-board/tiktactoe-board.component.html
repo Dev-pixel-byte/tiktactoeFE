@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Tic-Tac-Toe</h1>
+    <div class="board">
+      <div class="cell" *ngFor="let cell of board; let i = index" (click)="makeMove(i)">
+        {{ cell }}
+      </div>
+    </div>
+    <button (click)="resetBoard()">Reset</button>
+    <div class="status">
+      <p>{{ getStatusMessage() }}</p>
+    </div>
+  </div>
+  
